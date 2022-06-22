@@ -1,0 +1,28 @@
+.button {
+  height: 80px;
+  width: 640px;
+  border-radius: 16px;
+  padding: 0px, 24px, 0px, 24px;
+  font-weight: 800;
+}
+.button-enabled {
+  background: #59b9c6;
+  color: #ffffff;
+  cursor: pointer;
+}
+.button-hovere {
+  background: #66d8e8;
+  color: #ffffff;
+  cursor: pointer;
+}
+.button-pressed {
+  background: #59b9c6;
+  color: #ffffff;
+  cursor: pointer;
+}
+.button-disabled {
+  background: #d0d0d0;
+  color: #b7b7b7;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
