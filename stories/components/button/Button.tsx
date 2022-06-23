@@ -1,19 +1,52 @@
 import React from 'react';
-import { STATE } from '../../constants/propsType';
-import './button.css';
+import styled from 'styled-components';
+import { STATE } from '../../constants/dataTypes';
+import { ButtonProps } from '../../constants/propTypes';
 
-interface ButtonProps {
-  state: STATE;
+const StyledButton = styled.button`
+  height: 80px;
+  width: 640px;
+  border-radius: 16px;
+  padding: 0px, 24px, 0px, 24px;
+  font-weight: 800;
+`;
 
-  label: string;
+const EnabledButton = styled(StyledButton)`
+  background: #59b9c6;
+  color: #ffffff;
+  cursor: pointer;
+`;
 
-  onClick?: () => void;
-}
+const HovereButton = styled(StyledButton)`
+  background: #66d8e8;
+  color: #ffffff;
+  cursor: pointer;
+`;
 
-export const Button = ({ state = STATE.ENAVLED, label = 'button' }: ButtonProps) => {
+const PressedButton = styled(StyledButton)`
+  background: #59b9c6;
+  color: #ffffff;
+  cursor: pointer;
+`;
+
+const DisabledButton = styled(StyledButton)`
+  background: #d0d0d0;
+  color: #b7b7b7;
+  cursor: not-allowed;
+`;
+
+const buttons = {
+  enabled: EnabledButton,
+  hovere: HovereButton,
+  pressed: PressedButton,
+  disabled: DisabledButton,
+};
+
+export const Button = ({ state, label, onClick }: ButtonProps) => {
+  const ButtonComponent = buttons[state];
   return (
-    <button type="button" className={['button', `button-${state}`].join(' ')}>
+    <ButtonComponent onClick={onClick} disabled={state === STATE.DISABLED}>
       {label}
-    </button>
+    </ButtonComponent>
   );
 };

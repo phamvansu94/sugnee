@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button } from './Button';
-import { STATE } from '../../constants/propsType';
+import { STATE } from '../../constants/dataTypes';
 
 export default {
   title: 'Example/Button',
