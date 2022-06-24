@@ -1,19 +1,12 @@
 import React from 'react';
-import { STATE } from '../../constants/propsType';
-import './button.css';
+import { STATE } from '../../constants/dataTypes';
+import { ButtonProps } from '../../constants/propTypes';
+import { ButtonStyled } from './ButtonStyled';
 
-interface ButtonProps {
-  state: STATE;
-
-  label: string;
-
-  onClick?: () => void;
-}
-
-export const Button = ({ state = STATE.ENAVLED, label = 'button' }: ButtonProps) => {
+export const Button = ({ state, label, onClick }: ButtonProps) => {
   return (
-    <button type="button" className={['button', `button-${state}`].join(' ')}>
+    <ButtonStyled onClick={onClick} state={state} label={label} disabled={state === STATE.DISABLED}>
       {label}
-    </button>
+    </ButtonStyled>
   );
 };

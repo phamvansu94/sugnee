@@ -1,36 +1,40 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Button } from './Button';
-import { STATE } from '../../constants/dataTypes';
+import { IconButton } from './IconButton';
+import { ICON, SIZE, STATE } from '../../constants/dataTypes';
 
 export default {
-  title: 'Example/Button',
-  component: Button,
-} as ComponentMeta<typeof Button>;
+  title: 'Example/IconButton',
+  component: IconButton,
+} as ComponentMeta<typeof IconButton>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof IconButton> = (args) => <IconButton {...args} />;
 
 export const Enabled = Template.bind({});
 Enabled.args = {
   state: STATE.ENAVLED,
-  label: 'Enabled',
+  size: SIZE.SMALL,
+  icon: ICON.CLOSE,
 };
 
 export const Hovere = Template.bind({});
 Hovere.args = {
   state: STATE.HOVERE,
-  label: 'Hovere',
+  size: SIZE.SMALL,
+  icon: ICON.CLOSE,
 };
 
 export const Pressed = Template.bind({});
 Pressed.args = {
   state: STATE.PRESSED,
-  label: 'Pressed',
+  size: SIZE.SMALL,
+  icon: ICON.CLOSE,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
   state: STATE.DISABLED,
-  label: 'Disabled',
+  size: SIZE.SMALL,
+  icon: ICON.CLOSE,
 };
