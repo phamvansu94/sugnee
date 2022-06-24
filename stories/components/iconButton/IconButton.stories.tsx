@@ -18,13 +18,6 @@ Enabled.args = {
   icon: ICON.CLOSE,
 };
 
-export const Hovere = Template.bind({});
-Hovere.args = {
-  state: STATE.HOVERE,
-  size: SIZE.SMALL,
-  icon: ICON.CLOSE,
-};
-
 export const Pressed = Template.bind({});
 Pressed.args = {
   state: STATE.PRESSED,
