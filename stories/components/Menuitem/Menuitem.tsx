@@ -1,18 +1,22 @@
 import React, { ReactNode } from 'react';
-import './Menuitem.css';
 import { Star } from '../../icon/iconmenu';
+import { Div } from './MenuItemStyled';
 type props = {
-  text?: boolean;
-  disabled?: boolean;
+  hastext?: boolean;
   label: string;
   icon?: ReactNode;
   onClick?: () => void;
 };
-export default function Menuitem({ text = true, disabled = false, label = 'option', icon = <Star />, onClick }: props) {
+export default function Menuitem({ hastext = true, label = 'option', icon = <Star />, onClick }: props) {
+  const [active, setActive] = React.useState(false);
+  onClick = () => {
+    setActive(!active);
+    console.log('lllllll');
+  };
   return (
-    <div className="Menuitem" onClick={onClick}>
+    <Div onClick={onClick} active={active}>
       {icon}
-      {text ? <label>{label}</label> : <label></label>}
-    </div>
+      {hastext ? <label>{label}</label> : null}
+    </Div>
   );
 }

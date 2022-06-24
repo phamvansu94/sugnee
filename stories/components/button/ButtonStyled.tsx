@@ -17,24 +17,28 @@ export const ButtonStyled = styled.button<ButtonProps>`
         color: #ffffff;
         cursor: pointer;
         `;
+        break;
       case STATE.HOVERE:
         return `
         background: #66d8e8;
         color: #ffffff;
         cursor: pointer;
         `;
+        break;
       case STATE.PRESSED:
         return `
         background: #59b9c6;
         color: #ffffff;
         cursor: pointer;
           `;
+        break;
       case STATE.DISABLED:
         return `
         background: #d0d0d0;
         color: #b7b7b7;
         cursor: not-allowed;
           `;
+        break;
       default:
         return `
         background: #59b9c6;
