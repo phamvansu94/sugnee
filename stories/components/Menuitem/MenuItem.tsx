@@ -7,7 +7,7 @@ type props = {
   icon?: ReactNode;
   onClick?: () => void;
 };
-export default function Menuitem({ hastext = true, label = 'option', icon = <Star />, onClick }: props) {
+export default function MenuItem({ hastext = true, label = 'option', icon = <Star />, onClick }: props) {
   const [active, setActive] = React.useState(false);
   onClick = () => {
     setActive(!active);
