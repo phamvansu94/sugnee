@@ -17,12 +17,6 @@ Enabled.args = {
   label: 'Enabled',
 };
 
-export const Hovere = Template.bind({});
-Hovere.args = {
-  state: STATE.HOVERE,
-  label: 'Hovere',
-};
-
 export const Pressed = Template.bind({});
 Pressed.args = {
   state: STATE.PRESSED,

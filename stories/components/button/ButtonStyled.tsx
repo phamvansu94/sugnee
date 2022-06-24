@@ -8,39 +8,11 @@ export const ButtonStyled = styled.button<ButtonProps>`
   border-radius: 16px;
   padding: 0px, 24px, 0px, 24px;
   font-weight: 800;
+  background: ${(props) => (props.state === STATE.DISABLED ? '#d0d0d0' : '#59b9c6')};
+  cursor: ${(props) => (props.state === STATE.DISABLED ? 'not-allowed' : 'pointer')};
+  color: ${(props) => (props.state === STATE.DISABLED ? '#b7b7b7' : '#ffffff')};
 
-  ${(props) => {
-    switch (props.state) {
-      case STATE.ENAVLED:
-        return `
-        background: #59b9c6;
-        color: #ffffff;
-        cursor: pointer;
-        `;
-      case STATE.HOVERE:
-        return `
-        background: #66d8e8;
-        color: #ffffff;
-        cursor: pointer;
-        `;
-      case STATE.PRESSED:
-        return `
-        background: #59b9c6;
-        color: #ffffff;
-        cursor: pointer;
-          `;
-      case STATE.DISABLED:
-        return `
-        background: #d0d0d0;
-        color: #b7b7b7;
-        cursor: not-allowed;
-          `;
-      default:
-        return `
-        background: #59b9c6;
-        color: #ffffff;
-        cursor: pointer;
-        `;
-    }
-  }}
+  &:hover:not([disabled]) {
+    background: #66d8e8;
+  }
 `;
