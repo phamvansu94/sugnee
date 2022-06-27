@@ -1,5 +1,4 @@
-import { type } from 'os';
-import { ICON, IMAGE, SIZE, STATE ,ICONMENU} from './dataTypes';
+import { ICON, IMAGE, SIZE, STATE ,ICON_MENU} from './dataTypes';
 
 export interface ButtonProps {
   state: STATE;
@@ -30,7 +29,7 @@ export interface AvatarProps {
 export type IconMenuProps ={
   hastext?: boolean;
   label: string;
-  icon: ICONMENU;
+  icon: ICON_MENU;
   // "Group"|"Device"|"Connect"|"ManageAccounts"|"Logout"|"Star";
   onClick?: () => void;
 }

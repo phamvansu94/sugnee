@@ -2,9 +2,9 @@ import React, { ReactNode } from 'react';
 import { Star, Connect, Device, Group, Logout, ManageAccounts } from '../../icon/iconmenu';
 import { MenuItemStyled } from './MenuItemStyled';
 import { IconMenuProps } from '../../constants/propTypes';
-import { ICONMENU } from '../../constants/dataTypes';
+import { ICON_MENU } from '../../constants/dataTypes';
 
-export default function MenuItem({ hastext = true, label = 'option', icon = ICONMENU.STAR, onClick }: IconMenuProps) {
+export default function MenuItem({ hastext = true, label = 'option', icon = ICON_MENU.STAR, onClick }: IconMenuProps) {
   const [active, setActive] = React.useState(false);
   const iconMenu = {
     Star: <Star />,
@@ -15,7 +15,6 @@ export default function MenuItem({ hastext = true, label = 'option', icon = ICON
     ManageAccounts: <ManageAccounts />,
   };
 
-  //luu y
   onClick = () => {
     setActive(!active);
   };
@@ -23,7 +22,7 @@ export default function MenuItem({ hastext = true, label = 'option', icon = ICON
   return (
     <MenuItemStyled onClick={onClick} active={active}>
       {iconMenu[icon]}
-      {hastext ? <label>{label}</label> : null}
+      {hastext && <label>{label}</label>}
     </MenuItemStyled>
   );
 }

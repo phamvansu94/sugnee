@@ -31,11 +31,11 @@ export enum IMAGE {
   AVATAR_10 = 'avatar_10',
 }
 
-export enum ICONMENU {
+export enum ICON_MENU {
   GROUP=  "Group",
   DEVICE = "Device",
   CONNECT = "Connect",
-  MANAGEACCOUNTS = "ManageAccounts",
+  MANAGE_ACCOUNTS = "ManageAccounts",
   LOGOUT = "Logout",
   STAR = "Star"
 }
