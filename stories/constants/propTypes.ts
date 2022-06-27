@@ -1,4 +1,4 @@
-import { ICON, IMAGE, SIZE, STATE ,ICON_MENU} from './dataTypes';
+import { ICON, IMAGE, SIZE, STATE, ICON_MENU } from './dataTypes';
 
 export interface ButtonProps {
   state: STATE;
@@ -26,10 +26,18 @@ export interface AvatarProps {
   image: IMAGE;
 }
 
-export type IconMenuProps ={
+export type IconMenuProps = {
   hastext?: boolean;
   label: string;
   icon: ICON_MENU;
   // "Group"|"Device"|"Connect"|"ManageAccounts"|"Logout"|"Star";
   onClick?: () => void;
+};
+
+export interface SelectBoxProps {
+  data: {
+    label: string;
+    value: string;
+  }[];
+  onChange?: (e: any) => void;
 }
