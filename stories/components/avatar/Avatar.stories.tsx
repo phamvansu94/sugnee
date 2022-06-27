@@ -16,12 +16,6 @@ Enabled.args = {
   image: IMAGE.AVATAR_01,
 };
 
-export const Hovere = Template.bind({});
-Hovere.args = {
-  state: STATE.HOVERE,
-  image: IMAGE.AVATAR_01,
-};
-
 export const Pressed = Template.bind({});
 Pressed.args = {
   state: STATE.PRESSED,
