@@ -3,7 +3,7 @@ import styled from 'styled-components';
 type props = {
   active: boolean;
 };
-const Div = styled.div<props>`
+const MenuItemStyled = styled.div<props>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,4 +14,4 @@ const Div = styled.div<props>`
   }
   ${(props) => props.active && `background: #66d8e8;`}
 `;
-export { Div };
+export { MenuItemStyled };

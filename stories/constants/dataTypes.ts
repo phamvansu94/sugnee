@@ -30,3 +30,12 @@ export enum IMAGE {
   AVATAR_09 = 'avatar_09',
   AVATAR_10 = 'avatar_10',
 }
+
+export enum ICONMENU {
+  GROUP=  "Group",
+  DEVICE = "Device",
+  CONNECT = "Connect",
+  MANAGEACCOUNTS = "ManageAccounts",
+  LOGOUT = "Logout",
+  STAR = "Star"
+}

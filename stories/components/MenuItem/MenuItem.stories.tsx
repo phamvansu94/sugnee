@@ -1,30 +1,25 @@
 import MenuItem from './MenuItem';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { actions } from '@storybook/addon-actions';
-import { Star } from '../../icon/iconmenu';
-import { ReactNode } from 'react';
+import { action } from '@storybook/addon-actions';
+import { IconMenuProps } from '../../constants/propTypes';
+import { ICONMENU } from '../../constants/dataTypes';
 
 export default {
-  title: 'Example/Menuitem',
+  title: 'Example/MenuItem',
   component: MenuItem,
   argTypes: { onClick: { action: 'clicked' } },
 } as ComponentMeta<typeof MenuItem>;
-type args = {
-  hastext: boolean;
-  con?: ReactNode;
-  label: string;
-  onClick: () => void;
-};
-const Template: any = (args: args) => <MenuItem {...args} />;
+
+const Template: any = (args: IconMenuProps) => <MenuItem {...args} />;
 export const textTrue = Template.bind({});
 textTrue.args = {
   hastext: true,
-  icon: <Star />,
+  icon: ICONMENU.STAR,
   label: 'option',
 };
 export const texFalse = Template.bind({});
 texFalse.args = {
   hastext: false,
-  icon: <Star />,
+  icon: ICONMENU.STAR,
   label: 'option',
 };
