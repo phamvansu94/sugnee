@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-type props = {
+type MenuItemProps = {
   active: boolean;
 };
-const MenuItemStyled = styled.div<props>`
+const MenuItemStyled = styled.div<MenuItemProps>`
   display: flex;
   justify-content: center;
   align-items: center;
