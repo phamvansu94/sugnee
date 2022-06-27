@@ -41,3 +41,10 @@ export interface SelectBoxProps {
   }[];
   onChange?: (e: any) => void;
 }
+
+export interface TabsProps {
+  data: {
+    heading: string;
+    body: string; //TODO: Change string to react node
+  }[];
+}
