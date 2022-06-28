@@ -48,3 +48,8 @@ export interface TabsProps {
     body: string; //TODO: Change string to react node
   }[];
 }
+//TODO: add type for props
+export interface ModalProps {
+  icon: any;
+  content: any;
+}
