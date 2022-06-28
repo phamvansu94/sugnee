@@ -30,6 +30,11 @@ export type IconMenuProps ={
   hastext?: boolean;
   label: string;
   icon: ICON_MENU;
-  // "Group"|"Device"|"Connect"|"ManageAccounts"|"Logout"|"Star";
-  onClick?: () => void;
+  onClick?:()=>void;
+  active?: boolean
+}
+
+
+export type MenuProps = {
+    hastext : boolean;
 }
