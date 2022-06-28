@@ -5,11 +5,11 @@ import { IconMenuProps } from '../../constants/propTypes';
 import { ICON_MENU } from '../../constants/dataTypes';
 
 export default function MenuItem({
-  hastext = true,
+  hasText = true,
   label = 'option',
   icon = ICON_MENU.STAR,
   onClick,
-  active = false,
+  action = false,
 }: IconMenuProps) {
   const iconMenu = {
     Star: <Star />,
@@ -21,9 +21,9 @@ export default function MenuItem({
   };
 
   return (
-    <MenuItemStyled onClick={onClick} active={active} hastex={hastext}>
+    <MenuItemStyled onClick={onClick} action={action} hasText={hasText}>
       {iconMenu[icon]}
-      {hastext && <Text>{label}</Text>}
+      {hasText && <Text>{label}</Text>}
     </MenuItemStyled>
   );
 }

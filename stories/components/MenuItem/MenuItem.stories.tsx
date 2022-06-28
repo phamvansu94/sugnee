@@ -12,15 +12,15 @@ export default {
 const Template: ComponentStory<typeof MenuItem> = (args: IconMenuProps) => <MenuItem {...args} />;
 export const textTrue = Template.bind({});
 textTrue.args = {
-  hastext: true,
+  hasText: true,
   icon: ICON_MENU.STAR,
   label: 'option',
-  active: false,
+  action: false,
 };
 export const texFalse = Template.bind({});
 texFalse.args = {
-  hastext: false,
+  hasText: false,
   icon: ICON_MENU.STAR,
   label: 'option',
-  active: false,
+  action: false,
 };

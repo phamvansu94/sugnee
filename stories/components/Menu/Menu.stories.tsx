@@ -11,9 +11,9 @@ const Template: ComponentStory<typeof Menu> = (args: MenuProps) => <Menu {...arg
 
 export const textTrue = Template.bind({});
 textTrue.args = {
-  hastext: true,
+  hasText: true,
 };
 export const textFalse = Template.bind({});
 textFalse.args = {
-  hastext: false,
+  hasText: false,
 };

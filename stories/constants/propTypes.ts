@@ -27,16 +27,16 @@ export interface AvatarProps {
 }
 
 export type IconMenuProps ={
-  hastext?: boolean;
+  hasText?: boolean;
   label: string;
   icon: ICON_MENU;
   onClick?:()=>void;
-  active?: boolean
+  action?: boolean
 }
 
 
 export type MenuProps = {
-    hastext : boolean;
+    hasText : boolean;
 }
 
 export interface SelectBoxProps {

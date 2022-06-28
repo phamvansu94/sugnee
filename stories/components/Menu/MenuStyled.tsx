@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-type props = {
-  hastex?: boolean;
+type MenuProps = {
+  hasText?: boolean;
 };
-export const MenuStyled = styled.div<props>`
+export const MenuStyled = styled.div<MenuProps>`
   display: flex;
   align-items: center;
   flex-direction: column;
   box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.25);
   ${(props) =>
-    props.hastex
+    props.hasText
       ? `width: 200px;
         height: 960px;
         `
