@@ -10,7 +10,7 @@ const Modal = ({ icon, content }: ModalProps) => {
   const closeModal = () => setOpen(false);
   return (
     <div>
-      <IconButton icon={icon} size={SIZE.SMALL} state={STATE.ENAVLED} onClick={() => setOpen(!open)} />
+      <IconButton icon={icon} size={SIZE.SMALL} state={STATE.ENABLED} onClick={() => setOpen(!open)} />
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         {content}
       </Popup>

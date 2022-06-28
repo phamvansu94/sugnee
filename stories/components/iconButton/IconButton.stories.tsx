@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof IconButton> = (args) => <IconButton {...ar
 
 export const Enabled = Template.bind({});
 Enabled.args = {
-  state: STATE.ENAVLED,
+  state: STATE.ENABLED,
   size: SIZE.SMALL,
   icon: ICON.CLOSE,
 };

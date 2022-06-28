@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
 
 export const Enabled = Template.bind({});
 Enabled.args = {
-  state: STATE.ENAVLED,
+  state: STATE.ENABLED,
   image: IMAGE.AVATAR_01,
 };
 
