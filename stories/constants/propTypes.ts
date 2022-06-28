@@ -53,3 +53,8 @@ export interface ModalProps {
   icon: any;
   content: any;
 }
+
+export interface QRCodeProps {
+  value: string;
+  size: number;
+}
