@@ -12,6 +12,6 @@ const Template: ComponentStory<typeof QRCode> = (args: QRCodeProps) => <QRCode {
 
 export const QRCodeTemp = Template.bind({});
 QRCodeTemp.args = {
-  value: 'organizationsId_userId',
+  value: JSON.stringify({ org: 'sphinx', user: 'user 1' }),
   size: 150,
 };
