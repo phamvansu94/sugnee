@@ -58,3 +58,8 @@ export interface QRCodeProps {
   value: string;
   size: number;
 }
+
+export interface IndicatorProps {
+  state: boolean;
+  onClick?: () => void;
+}
