@@ -1,6 +1,5 @@
 import MenuItem from './MenuItem';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { IconMenuProps } from '../../constants/propTypes';
 import { ICON_MENU } from '../../constants/dataTypes';
 

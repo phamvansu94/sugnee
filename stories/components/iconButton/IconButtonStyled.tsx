@@ -20,11 +20,16 @@ const icons = {
 export const IconButtonStyled = styled.button<IconButtonProps>`
   border-radius: 16px;
   border: 2px solid #dadada;
-  background: ${(props) => props.state !== STATE.DISABLED && '#ffffff'};
+  background: ${(props) => (props.state === STATE.DISABLED ? '#e5e5e5' : '#ffffff')};
   width: ${(props) => (props.size === SIZE.SMALL ? '96px' : '160px')};
   height: ${(props) => (props.size === SIZE.SMALL ? '96px' : '160px')};
   background-image: url(${(props) => icons[props.icon]});
   background-repeat: no-repeat;
   background-size: ${(props) => (props.size === SIZE.SMALL ? '96px' : '160px')};
   mix-blend-mode: hard-light;
+  cursor: ${(props) => (props.state !== STATE.DISABLED ? 'pointer' : 'not-allowed')};
+
+  &:hover:not([disabled]) {
+    opacity: 0.5;
+  }
 `;
