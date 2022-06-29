@@ -5,7 +5,7 @@ import { ICON_MENU } from '../../constants/dataTypes';
 
 const MenuContent = [
   { icon: ICON_MENU.GROUP, label: 'つなぐ', action: false },
-  { icon: ICON_MENU.DEVICE, label: '端末', action: true },
+  { icon: ICON_MENU.DEVICE, label: '端末', action: false },
   { icon: ICON_MENU.CONNECT, label: 'グループ', action: false },
   { icon: ICON_MENU.MANAGE_ACCOUNTS, label: '管理者', action: false },
   { icon: ICON_MENU.LOGOUT, label: 'ログアウト', action: false },

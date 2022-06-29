@@ -8,7 +8,7 @@ export default function Menu({ hasText = true, content }: MenuProps) {
   const [contentMenu, setContentMenu] = useState(content);
   const setAction = ({ index }: { index: number }) => {
     const newContent = contentMenu.map((item, indexItem) =>
-      index === indexItem ? { ...item, active: true } : { ...item, active: false }
+      index === indexItem ? { ...item, action: true } : { ...item, action: false }
     );
     console.log(newContent);
     setContentMenu(newContent);
