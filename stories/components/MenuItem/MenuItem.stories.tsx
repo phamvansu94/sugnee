@@ -6,7 +6,7 @@ import { ICON_MENU } from '../../constants/dataTypes';
 export default {
   title: 'Example/MenuItem',
   component: MenuItem,
-  argTypes: { onClick: { action: 'clicked' } },
+  argTypes: { onClick: { active: 'clicked' } },
 } as ComponentMeta<typeof MenuItem>;
 
 const Template: ComponentStory<typeof MenuItem> = (args: IconMenuProps) => <MenuItem {...args} />;
@@ -15,12 +15,12 @@ textTrue.args = {
   hasText: true,
   icon: ICON_MENU.STAR,
   label: 'option',
-  action: false,
+  active: false,
 };
 export const textFalse = Template.bind({});
 textFalse.args = {
   hasText: false,
   icon: ICON_MENU.STAR,
   label: 'option',
-  action: false,
+  active: false,
 };

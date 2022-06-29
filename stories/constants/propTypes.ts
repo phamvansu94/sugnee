@@ -26,22 +26,18 @@ export interface AvatarProps {
   image: IMAGE;
 }
 
-export type IconMenuProps ={
+export type IconMenuProps = {
   hasText?: boolean;
   label: string;
   icon: ICON_MENU;
-  onClick?:()=>void;
-  action?: boolean
-}
-
+  onClick?: () => void;
+  active?: boolean;
+};
 
 export type MenuProps = {
-    hasText : boolean;
-    content : { label: string;
-                icon: ICON_MENU;
-                action: boolean;}[]
-}
-
+  hasText: boolean;
+  content: { label: string; icon: ICON_MENU; active: boolean }[];
+};
 
 export interface SelectBoxProps {
   data: {

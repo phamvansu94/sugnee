@@ -9,7 +9,7 @@ export default function MenuItem({
   label = 'option',
   icon = ICON_MENU.STAR,
   onClick,
-  action = false,
+  active = false,
 }: IconMenuProps) {
   const iconMenu = {
     Star: <Star />,
@@ -21,7 +21,7 @@ export default function MenuItem({
   };
 
   return (
-    <MenuItemStyled onClick={onClick} action={action} hasText={hasText}>
+    <MenuItemStyled onClick={onClick} active={active} hasText={hasText}>
       {iconMenu[icon]}
       {hasText && <Text>{label}</Text>}
     </MenuItemStyled>

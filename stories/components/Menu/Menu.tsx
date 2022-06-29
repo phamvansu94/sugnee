@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
-import MenuItem from '../MenuItem/MenuItem';
+import MenuItem from '../menuItem/MenuItem';
 import { MenuProps } from '../../constants/propTypes';
 import { MenuStyled, TitleText, TitleImg } from './MenuStyled';
 import Sugnee from '../../assets/Sugnee.svg';
 
 export default function Menu({ hasText = true, content }: MenuProps) {
   const [contentMenu, setContentMenu] = useState(content);
-  const setAction = ({ index }: { index: number }) => {
-    const newContent = contentMenu.map((item, indexItem) =>
-      index === indexItem ? { ...item, action: true } : { ...item, action: false }
-    );
-    console.log(newContent);
+  const setActive = (indexActive: number) => {
+    const newContent = contentMenu.map((item, indexItem) => ({ ...item, active: indexActive === indexItem }));
     setContentMenu(newContent);
   };
   return (
@@ -22,8 +19,8 @@ export default function Menu({ hasText = true, content }: MenuProps) {
           hasText={hasText}
           key={item.label}
           icon={item.icon}
-          onClick={() => setAction({ index: index })}
-          action={item.action}
+          onClick={() => setActive(index)}
+          active={item.active}
         />
       ))}
     </MenuStyled>
