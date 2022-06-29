@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-type props = {
+type MenuItemProps = {
   action: boolean;
   hasText: boolean;
 };
-const MenuItemStyled = styled.div<props>`
+const MenuItemStyled = styled.div<MenuItemProps>`
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -17,7 +17,6 @@ const MenuItemStyled = styled.div<props>`
 
   ${(props) => (!props.hasText ? `justify-content: center ; max-width: 80px;` : ` padding-left: 20px;`)}
 `;
-const Text = styled.label`
-     margin: 10px;}
-`;
+const Text = styled.label`margin: 10px;}`;
+
 export { MenuItemStyled, Text };

@@ -8,14 +8,8 @@ export const MenuStyled = styled.div<MenuProps>`
   align-items: center;
   flex-direction: column;
   box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.25);
-  ${(props) =>
-    props.hasText
-      ? `width: 200px;
-        height: 960px;
-        `
-      : `width: 80px;
-        height: 960px;
-        `};
+  height: 960px;
+  ${(props) =>props.hasText ? `width: 200px;`: `width: 80px;`};
 `;
 
 const sizeTitle = ` margin: 10px 0px;

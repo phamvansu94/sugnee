@@ -37,7 +37,11 @@ export type IconMenuProps ={
 
 export type MenuProps = {
     hasText : boolean;
+    content : { label: string;
+                icon: ICON_MENU;
+                action: boolean;}[]
 }
+
 
 export interface SelectBoxProps {
   data: {

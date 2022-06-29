@@ -17,8 +17,8 @@ textTrue.args = {
   label: 'option',
   action: false,
 };
-export const texFalse = Template.bind({});
-texFalse.args = {
+export const textFalse = Template.bind({});
+textFalse.args = {
   hasText: false,
   icon: ICON_MENU.STAR,
   label: 'option',

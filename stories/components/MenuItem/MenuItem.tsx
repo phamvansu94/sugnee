@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Star, Connect, Device, Group, Logout, ManageAccounts } from '../../icon/iconmenu';
 import { MenuItemStyled, Text } from './MenuItemStyled';
 import { IconMenuProps } from '../../constants/propTypes';
