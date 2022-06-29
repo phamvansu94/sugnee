@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Enabled = Template.bind({});
 Enabled.args = {
-  state: STATE.ENAVLED,
+  state: STATE.ENABLED,
   label: 'Enabled',
 };
 

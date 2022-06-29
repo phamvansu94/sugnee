@@ -1,5 +1,5 @@
 export enum STATE {
-  ENAVLED = 'enabled',
+  ENABLED = 'enabled',
   PRESSED = 'pressed',
   DISABLED = 'disabled',
 }
@@ -32,10 +32,10 @@ export enum IMAGE {
 }
 
 export enum ICON_MENU {
-  GROUP=  "Group",
-  DEVICE = "Device",
-  CONNECT = "Connect",
-  MANAGE_ACCOUNTS = "ManageAccounts",
-  LOGOUT = "Logout",
-  STAR = "Star"
+  GROUP = 'Group',
+  DEVICE = 'Device',
+  CONNECT = 'Connect',
+  MANAGE_ACCOUNTS = 'ManageAccounts',
+  LOGOUT = 'Logout',
+  STAR = 'Star',
 }
