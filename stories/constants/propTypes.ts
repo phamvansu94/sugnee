@@ -27,11 +27,16 @@ export interface AvatarProps {
 }
 
 export type IconMenuProps = {
-  hastext?: boolean;
+  hasText?: boolean;
   label: string;
   icon: ICON_MENU;
-  // "Group"|"Device"|"Connect"|"ManageAccounts"|"Logout"|"Star";
   onClick?: () => void;
+  active?: boolean;
+};
+
+export type MenuProps = {
+  hasText: boolean;
+  content: { label: string; icon: ICON_MENU; active: boolean }[];
 };
 
 export interface SelectBoxProps {
